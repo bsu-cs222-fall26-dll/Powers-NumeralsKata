@@ -2,10 +2,10 @@ package edu.bsu.cs;
 
 public  class NumeralsConverter {
     public String converttoNumerals(int number) {
-        int digit1 = 0;
-        int digit2 = 0;
-        int digit3 = 0;
-        int digit4 = 0;
+        int digit1;
+        int digit2;
+        int digit3;
+        int digit4;
         String firstdigit=null;
         String seconddigit=null;
         String thirddigit=null;
@@ -15,7 +15,7 @@ public  class NumeralsConverter {
              firstdigit = charConverter(digit1);
         }
         if (number >= 10) {
-             digit2 = (number % 10 - digit1) / 10;
+             digit2 = (number / 10) % 10;
              String digitholder = charConverter(digit2);
              seconddigit = digitholder.replace("V","L").replace("I","X");
         }
